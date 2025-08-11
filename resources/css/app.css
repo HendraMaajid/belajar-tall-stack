@@ -8,7 +8,7 @@
 }
 
 /* Include Tailwind CSS plugins for enhanced form styling and typography */
-@plugin '@tailwindcss/forms';
+
 @plugin '@tailwindcss/typography';
 
 /* Remove default red box-shadow on invalid form elements */

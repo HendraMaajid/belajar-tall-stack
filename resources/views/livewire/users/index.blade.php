@@ -11,6 +11,8 @@ new class extends Component {
     public string $search = '';
 
     public bool $drawer = false;
+    
+    public $color2 = '#ff0000';
 
     public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
 
@@ -85,9 +87,10 @@ new class extends Component {
             @endscope
         </x-table>
     </x-card>
+    <x-colorpicker wire:model.live="color2" label="Icon" icon="o-swatch" />
 
     <!-- FILTER DRAWER -->
-    <x-drawer wire:model="drawer" title="Filters" right separator with-close-button class="lg:w-1/3">
+    <x-drawer wire:model.live="drawer" title="Filters" right separator with-close-button class="lg:w-1/3">
         <x-input placeholder="Search..." wire:model.live.debounce="search" icon="o-magnifying-glass" @keydown.enter="$wire.drawer = false" />
 
         <x-slot:actions>
